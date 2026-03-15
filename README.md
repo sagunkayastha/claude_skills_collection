@@ -28,4 +28,6 @@ bash update_skills.sh
 
 ## Sources
 
-- [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+- [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) — primary source for most skills
+- [autoraysearch](https://github.com/sagunkayastha/autoraysearch) — autonomous PyTorch model tuning on Ray clusters (`custom/autoraysearch`)
+- [notebooklm-py](https://github.com/teng-lin/notebooklm-py) — complete programmatic API for Google NotebookLM (`scientific-communication/notebooklm`)

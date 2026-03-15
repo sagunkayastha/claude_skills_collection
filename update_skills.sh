@@ -33,6 +33,14 @@ EXCLUDED_SKILLS=(
   neuropixels-analysis
   # proteomics-mass-spectrometry
   matchms pyopenms
+  # infrastructure-platforms (niche)
+  dnanexus-integration latchbio-integration omero-integration opentrons-integration
+  # protein-engineering-design
+  esm glycoengineering adaptyv
+  # regulatory-standards
+  iso-13485-certification
+  # medical-imaging-pathology
+  pydicom histolab pathml
 )
 
 is_excluded() {

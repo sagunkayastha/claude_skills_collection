@@ -2,8 +2,6 @@
 name: notebooklm
 description: Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X"
 ---
-<!-- notebooklm-py v0.3.3 -->
-
 
 # NotebookLM Automation
 
@@ -25,7 +23,13 @@ pip install "git+https://github.com/teng-lin/notebooklm-py@${LATEST_TAG}"
 
 ⚠️ **DO NOT install from main branch** (`pip install git+https://github.com/teng-lin/notebooklm-py`). The main branch may contain unreleased/unstable changes. Always use PyPI or a specific release tag, unless you are testing unreleased features.
 
-After installation, install the Claude Code skill:
+**Skill install methods:**
+
+- `notebooklm skill install` installs this skill into the supported local agent directories managed by the CLI.
+- `npx skills add teng-lin/notebooklm-py` installs this skill from the GitHub repository into compatible agent skill directories.
+- If you are already reading this file inside an agent skill directory, the skill is already installed. You only need the Python package and authentication below.
+
+**CLI-managed install:**
 ```bash
 notebooklm skill install
 ```
@@ -131,6 +135,8 @@ Before starting workflows, verify the CLI is ready:
 | Add file | `notebooklm source add ./file.pdf` |
 | Add YouTube | `notebooklm source add "https://youtube.com/..."` |
 | List sources | `notebooklm source list` |
+| Delete source by ID | `notebooklm source delete <source_id>` |
+| Delete source by exact title | `notebooklm source delete-by-title "Exact Title"` |
 | Wait for source processing | `notebooklm source wait <source_id>` |
 | Web research (fast) | `notebooklm source add-research "query"` |
 | Web research (deep) | `notebooklm source add-research "query" --mode deep --no-wait` |
@@ -175,7 +181,7 @@ Before starting workflows, verify the CLI is ready:
 
 **Parallel safety:** Use explicit notebook IDs in parallel workflows. Commands supporting `-n` shorthand: `artifact wait`, `source wait`, `research wait/status`, `download *`. Download commands also support `-a/--artifact`. Other commands use `--notebook`. For chat, use `-c <conversation_id>` to target a specific conversation.
 
-**Partial IDs:** Use first 6+ characters of UUIDs. Must be unique prefix (fails if ambiguous). Works for: `use`, `delete`, `wait` commands. For automation, prefer full UUIDs to avoid ambiguity.
+**Partial IDs:** Use first 6+ characters of UUIDs. Must be unique prefix (fails if ambiguous). Works for ID-based commands such as `use`, `source delete`, and `wait`. For exact source-title deletion, use `source delete-by-title "Title"`. For automation, prefer full UUIDs to avoid ambiguity.
 
 ## Command Output Formats
 
@@ -235,7 +241,7 @@ All generate commands support:
 | Video | `generate video` | `--format [explainer\|brief]`, `--style [auto\|classic\|whiteboard\|kawaii\|anime\|watercolor\|retro-print\|heritage\|paper-craft]` | .mp4 |
 | Slide Deck | `generate slide-deck` | `--format [detailed\|presenter]`, `--length [default\|short]` | .pdf / .pptx |
 | Slide Revision | `generate revise-slide "prompt" --artifact <id> --slide N` | `--wait`, `--notebook` | *(re-downloads parent deck)* |
-| Infographic | `generate infographic` | `--orientation [landscape\|portrait\|square]`, `--detail [concise\|standard\|detailed]` | .png |
+| Infographic | `generate infographic` | `--orientation [landscape\|portrait\|square]`, `--detail [concise\|standard\|detailed]`, `--style [auto\|sketch-note\|professional\|bento-grid\|editorial\|instructional\|bricks\|clay\|anime\|kawaii\|scientific]` | .png |
 | Report | `generate report` | `--format [briefing-doc\|study-guide\|blog-post\|custom]`, `--append "extra instructions"` | .md |
 | Mind Map | `generate mind-map` | *(sync, instant)* | .json |
 | Data Table | `generate data-table` | description required | .csv |
@@ -560,4 +566,4 @@ notebooklm language --help     # Language settings
 **Diagnose auth:** `notebooklm auth check` - shows cookie domains, storage path, validation status
 **Re-authenticate:** `notebooklm login`
 **Check version:** `notebooklm --version`
-**Update skill:** `notebooklm skill install`
+**Refresh a CLI-managed install:** `notebooklm skill install`
