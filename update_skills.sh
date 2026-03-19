@@ -8,40 +8,10 @@ set -euo pipefail
 REPO="K-Dense-AI/claude-scientific-skills"
 REMOTE_PATH="scientific-skills"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+EXCLUDED_CONF="$SCRIPT_DIR/excluded.conf"
 
-# Skills to permanently exclude (removed categories)
-EXCLUDED_SKILLS=(
-  # bioinformatics-genomics
-  biopython pysam scikit-bio bioservices scanpy anndata scvi-tools scvelo
-  arboreto cellxgene-census gget geniml gtars deeptools flowio zarr-python
-  tiledbvcf etetoolkit phylogenetics pydeseq2
-  # cheminformatics-drug-discovery
-  rdkit datamol molfeat deepchem torchdrug diffdock molecular-dynamics
-  rowan medchem pytdc bindingdb-database
-  # multiomics-systems-biology
-  kegg-database reactome-database string-database denario hypogenic lamindb
-  # clinical-research
-  clinicaltrials-database clinvar-database clinpgx-database cosmic-database
-  fda-database cbioportal-database depmap monarch-database imaging-data-commons
-  pyhealth neurokit2 clinical-decision-support clinical-reports treatment-plans
-  # laboratory-automation
-  pylabrobot ginkgo-cloud-lab protocolsio-integration benchling-integration
-  labarchive-integration
-  # materials-science-chemistry-physics
-  pymatgen cobrapy astropy cirq pennylane qiskit qutip
-  # neuroscience
-  neuropixels-analysis
-  # proteomics-mass-spectrometry
-  matchms pyopenms
-  # infrastructure-platforms (niche)
-  dnanexus-integration latchbio-integration omero-integration opentrons-integration
-  # protein-engineering-design
-  esm glycoengineering adaptyv
-  # regulatory-standards
-  iso-13485-certification
-  # medical-imaging-pathology
-  pydicom histolab pathml
-)
+# Load excluded skills from excluded.conf (ignore blank lines and comments)
+mapfile -t EXCLUDED_SKILLS < <(grep -v '^\s*#' "$EXCLUDED_CONF" | grep -v '^\s*$')
 
 is_excluded() {
   local skill="$1"
