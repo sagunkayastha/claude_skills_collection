@@ -10,7 +10,7 @@ Send a one-way Telegram notification to the user's phone.
 ## Command
 
 ```bash
-/c/Users/sgnka/anaconda3/envs/pollen/bin/python "C:\Users\sgnka\.claude\tools\notify.py" "your message here"
+python ~/.claude/tools/notify.py "your message here"
 ```
 
 The script prepends the machine hostname automatically: `[hostname] your message here`
@@ -19,7 +19,8 @@ If no message is given, it sends `"Done."` by default.
 
 ## Setup (one-time)
 
-Create `C:\Users\sgnka\.claude\tools\telegram.env` with:
+1. Place `notify.py` at `~/.claude/tools/notify.py`
+2. Create `~/.claude/tools/telegram.env` with:
 
 ```
 TELEGRAM_BOT_TOKEN=your_bot_token_here
@@ -38,5 +39,5 @@ Do **not** paste tokens in chat — edit the file directly.
 
 ```bash
 # After a long build
-/c/Users/sgnka/anaconda3/envs/pollen/bin/python "C:\Users\sgnka\.claude\tools\notify.py" "Build complete"
+python ~/.claude/tools/notify.py "Build complete"
 ```
