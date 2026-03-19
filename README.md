@@ -149,11 +149,13 @@ Skills are organized by domain and sourced primarily from [K-Dense AI Scientific
 
 ## Updating
 
-Run `update_skills.sh` to check for new skills from K-Dense and download any that aren't already included. Excluded categories are hardcoded in the script and will never be pulled.
+Run `update_skills.sh` to check for new skills from K-Dense and download any that aren't already included.
 
 ```bash
 bash update_skills.sh
 ```
+
+Excluded skills are listed in [`excluded.conf`](./excluded.conf), grouped by category. To re-enable a skill, comment out its line — it will be picked up on the next run.
 
 ## Sources
 
