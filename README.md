@@ -10,6 +10,7 @@ Skills are organized by domain and sourced primarily from [K-Dense AI Scientific
 | Skill | Description |
 |-------|-------------|
 | [autoraysearch](./custom/autoraysearch/SKILL.md) | Autonomous PyTorch model tuning on Ray clusters |
+| [youtube_sum](./custom/youtube_sum/SKILL.md) | Transcribe YouTube videos with faster-whisper (GPU-accelerated) |
 
 ### [data-analysis-visualization](./data-analysis-visualization)
 | Skill | Description |
@@ -163,3 +164,4 @@ Excluded skills are listed in [`excluded.conf`](./excluded.conf), grouped by cat
 - [autoraysearch](https://github.com/sagunkayastha/autoraysearch) — autonomous PyTorch model tuning on Ray clusters (`custom/autoraysearch`)
 - [notebooklm-py](https://github.com/teng-lin/notebooklm-py) — complete programmatic API for Google NotebookLM (`scientific-communication/notebooklm`)
 - custom — one-way Telegram phone notifications via a local Python script (`infrastructure-platforms/notify`)
+- custom — YouTube video transcription with faster-whisper and interactive Claude workflow (`custom/youtube_sum`)
