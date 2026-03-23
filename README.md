@@ -161,7 +161,7 @@ Excluded skills are listed in [`excluded.conf`](./excluded.conf), grouped by cat
 ## Sources
 
 - [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) — primary source for most skills
-- [autoraysearch](https://github.com/sagunkayastha/autoraysearch) — autonomous PyTorch model tuning on Ray clusters (`custom/autoraysearch`)
+- custom — autonomous PyTorch model tuning on Ray clusters, derived from autoresearch (`custom/autoraysearch`)
 - [notebooklm-py](https://github.com/teng-lin/notebooklm-py) — complete programmatic API for Google NotebookLM (`scientific-communication/notebooklm`)
 - custom — one-way Telegram phone notifications via a local Python script (`infrastructure-platforms/notify`)
 - custom — YouTube video transcription with faster-whisper and interactive Claude workflow (`custom/youtube_sum`)
