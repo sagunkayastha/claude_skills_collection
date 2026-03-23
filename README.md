@@ -51,7 +51,6 @@ Skills are organized by domain and sourced primarily from [K-Dense AI Scientific
 |-------|-------------|
 | [get-available-resources](./infrastructure-platforms/get-available-resources/SKILL.md) | Discover compute resources at session start |
 | [modal](./infrastructure-platforms/modal/SKILL.md) | Serverless cloud Python execution |
-| [notify](./infrastructure-platforms/notify/SKILL.md) | One-way Telegram phone notifications |
 
 ### [machine-learning-ai](./machine-learning-ai)
 | Skill | Description |
@@ -163,5 +162,4 @@ Excluded skills are listed in [`excluded.conf`](./excluded.conf), grouped by cat
 - [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) — primary source for most skills
 - custom — autonomous PyTorch model tuning on Ray clusters, derived from autoresearch (`custom/autoraysearch`)
 - [notebooklm-py](https://github.com/teng-lin/notebooklm-py) — complete programmatic API for Google NotebookLM (`scientific-communication/notebooklm`)
-- custom — one-way Telegram phone notifications via a local Python script (`infrastructure-platforms/notify`)
 - custom — YouTube video transcription with faster-whisper and interactive Claude workflow (`custom/youtube_sum`)
