@@ -2,7 +2,7 @@
 
 A curated collection of Claude agent skills from various sources, assembled for my specific use case.
 
-Skills are organized by domain and sourced primarily from [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills). Only relevant categories are included — bioinformatics, clinical, cheminformatics, and other domain-specific skills have been intentionally excluded.
+Skills are organized by domain, sourced from [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) and [Orchestra Research AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs). Only relevant categories are included — bioinformatics, clinical, cheminformatics, and other domain-specific skills have been intentionally excluded.
 
 ## Structure
 
@@ -147,6 +147,179 @@ Skills are organized by domain and sourced primarily from [K-Dense AI Scientific
 | [uspto-database](./scientific-databases/uspto-database/SKILL.md) | USPTO patent and trademark search |
 | [zinc-database](./scientific-databases/zinc-database/SKILL.md) | ZINC purchasable compound database |
 
+### [agent-frameworks](./agent-frameworks)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [autogpt](./agent-frameworks/autogpt/SKILL.md) | Autonomous AI agent platform for building and deploying continuous agents |
+| [crewai](./agent-frameworks/crewai/SKILL.md) | Multi-agent orchestration framework for autonomous AI collaboration |
+| [langchain](./agent-frameworks/langchain/SKILL.md) | Framework for building LLM-powered applications with agents, chains, and RAG |
+| [llamaindex](./agent-frameworks/llamaindex/SKILL.md) | Data framework for building LLM applications with RAG and document indexing |
+
+### [data-processing](./data-processing)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [huggingface-tokenizers](./data-processing/huggingface-tokenizers/SKILL.md) | Fast Rust-based tokenizers for research and production |
+| [nemo-curator](./data-processing/nemo-curator/SKILL.md) | GPU-accelerated data curation for LLM training |
+| [ray-data](./data-processing/ray-data/SKILL.md) | Scalable data processing for ML workloads with streaming execution |
+| [sentencepiece](./data-processing/sentencepiece/SKILL.md) | Language-independent tokenizer with BPE and Unigram support |
+
+### [distributed-training](./distributed-training)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [accelerate](./distributed-training/accelerate/SKILL.md) | Simplest distributed training API for PyTorch |
+| [deepspeed](./distributed-training/deepspeed/SKILL.md) | ZeRO optimization stages for distributed training |
+| [megatron-core](./distributed-training/megatron-core/SKILL.md) | Large language model training (2B-462B params) with NVIDIA Megatron-Core |
+| [pytorch-fsdp2](./distributed-training/pytorch-fsdp2/SKILL.md) | PyTorch FSDP2 (fully_shard) distributed training |
+| [ray-train](./distributed-training/ray-train/SKILL.md) | Distributed training orchestration across clusters |
+
+### [emerging-techniques](./emerging-techniques)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [knowledge-distillation](./emerging-techniques/knowledge-distillation/SKILL.md) | Compress large language models from teacher to student |
+| [long-context](./emerging-techniques/long-context/SKILL.md) | Extend context windows with RoPE, YaRN, ALiBi |
+| [model-merging](./emerging-techniques/model-merging/SKILL.md) | Merge fine-tuned models using mergekit |
+| [model-pruning](./emerging-techniques/model-pruning/SKILL.md) | Reduce LLM size with Wanda and other pruning techniques |
+| [moe-training](./emerging-techniques/moe-training/SKILL.md) | Mixture of Experts model training |
+| [speculative-decoding](./emerging-techniques/speculative-decoding/SKILL.md) | Accelerate LLM inference with speculative decoding and Medusa heads |
+
+### [evaluation-benchmarks](./evaluation-benchmarks)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [bigcode-evaluation-harness](./evaluation-benchmarks/bigcode-evaluation-harness/SKILL.md) | Evaluate code generation models across HumanEval, MBPP, MultiPL-E |
+| [lm-evaluation-harness](./evaluation-benchmarks/lm-evaluation-harness/SKILL.md) | Evaluate LLMs across 60+ academic benchmarks (MMLU, GSM8K, etc.) |
+| [nemo-evaluator](./evaluation-benchmarks/nemo-evaluator/SKILL.md) | Evaluate LLMs across 100+ benchmarks from 18+ harnesses |
+
+### [fine-tuning-training](./fine-tuning-training)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [axolotl](./fine-tuning-training/axolotl/SKILL.md) | Fine-tune LLMs with YAML configs, 100+ models, LoRA/QLoRA |
+| [llama-factory](./fine-tuning-training/llama-factory/SKILL.md) | Fine-tune LLMs with WebUI, 100+ models support |
+| [peft](./fine-tuning-training/peft/SKILL.md) | Parameter-efficient fine-tuning with LoRA, QLoRA, 25+ methods |
+| [unsloth](./fine-tuning-training/unsloth/SKILL.md) | Fast fine-tuning — 2-5x faster, 50-80% less memory |
+
+### [inference-serving](./inference-serving)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [llama-cpp](./inference-serving/llama-cpp/SKILL.md) | LLM inference on CPU, Apple Silicon, and consumer GPUs |
+| [sglang](./inference-serving/sglang/SKILL.md) | Fast structured generation with RadixAttention prefix caching |
+| [tensorrt-llm](./inference-serving/tensorrt-llm/SKILL.md) | NVIDIA TensorRT optimized LLM inference |
+| [vllm](./inference-serving/vllm/SKILL.md) | High throughput LLM serving with PagedAttention |
+
+### [mechanistic-interpretability](./mechanistic-interpretability)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [nnsight](./mechanistic-interpretability/nnsight/SKILL.md) | Interpret and manipulate neural network internals |
+| [pyvene](./mechanistic-interpretability/pyvene/SKILL.md) | Causal interventions on PyTorch models |
+| [saelens](./mechanistic-interpretability/saelens/SKILL.md) | Train and analyze Sparse Autoencoders (SAEs) |
+| [transformer-lens](./mechanistic-interpretability/transformer-lens/SKILL.md) | Mechanistic interpretability research on transformers |
+
+### [ml-paper-writing](./ml-paper-writing)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [ml-paper-writing](./ml-paper-writing/SKILL.md) | ML paper writing with LaTeX templates for 10 major venues (NeurIPS, ICML, ICLR, AAAI, ACL, etc.) |
+
+### [mlops](./mlops)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [mlflow](./mlops/mlflow/SKILL.md) | Track experiments, manage model registry, deploy models |
+| [swanlab](./mlops/swanlab/SKILL.md) | Open-source experiment tracking |
+| [tensorboard](./mlops/tensorboard/SKILL.md) | Visualize training metrics and debug models |
+| [weights-and-biases](./mlops/weights-and-biases/SKILL.md) | ML experiment tracking with real-time visualization |
+
+### [model-architecture](./model-architecture)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [litgpt](./model-architecture/litgpt/SKILL.md) | Train LLMs with Lightning AI's LitGPT, 20+ architectures |
+| [mamba](./model-architecture/mamba/SKILL.md) | State-space model with O(n) complexity, 5x faster inference |
+| [nanogpt](./model-architecture/nanogpt/SKILL.md) | Educational GPT implementation in ~300 lines |
+| [rwkv](./model-architecture/rwkv/SKILL.md) | RNN+Transformer hybrid with O(n) inference, infinite context |
+| [torchtitan](./model-architecture/torchtitan/SKILL.md) | PyTorch-native distributed LLM pretraining with 4D parallelism |
+
+### [multimodal](./multimodal)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [audiocraft](./multimodal/audiocraft/SKILL.md) | Audio generation: text-to-music (MusicGen) and text-to-audio |
+| [blip-2](./multimodal/blip-2/SKILL.md) | Vision-language pre-training bridging image encoders and LLMs |
+| [clip](./multimodal/clip/SKILL.md) | OpenAI CLIP — zero-shot image classification, image-text matching |
+| [cosmos-policy](./multimodal/cosmos-policy/SKILL.md) | NVIDIA Cosmos Policy for robot simulation environments |
+| [llava](./multimodal/llava/SKILL.md) | Visual instruction tuning and image understanding |
+| [openpi](./multimodal/openpi/SKILL.md) | Physical Intelligence OpenPI models (pi0, pi0-fast, pi0.5) |
+| [openvla-oft](./multimodal/openvla-oft/SKILL.md) | OpenVLA-OFT robot action prediction fine-tuning |
+| [segment-anything](./multimodal/segment-anything/SKILL.md) | Foundation model for zero-shot image segmentation |
+| [stable-diffusion](./multimodal/stable-diffusion/SKILL.md) | Text-to-image generation with Stable Diffusion |
+| [whisper](./multimodal/whisper/SKILL.md) | OpenAI speech recognition — 99 languages, transcription, translation |
+
+### [observability](./observability)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [langsmith](./observability/langsmith/SKILL.md) | LLM observability: tracing, evaluation, monitoring |
+| [phoenix](./observability/phoenix/SKILL.md) | Open-source AI observability for LLM tracing and evaluation |
+
+### [optimization-quantization](./optimization-quantization)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [awq](./optimization-quantization/awq/SKILL.md) | 4-bit weight quantization with 3x speedup |
+| [bitsandbytes](./optimization-quantization/bitsandbytes/SKILL.md) | 8-bit/4-bit quantization for 50-75% memory reduction |
+| [flash-attention](./optimization-quantization/flash-attention/SKILL.md) | Optimized transformer attention — 2-4x speedup, 10-20x memory savings |
+| [gguf](./optimization-quantization/gguf/SKILL.md) | GGUF format and llama.cpp quantization for CPU/GPU inference |
+| [gptq](./optimization-quantization/gptq/SKILL.md) | Post-training 4-bit quantization with minimal accuracy loss |
+| [hqq](./optimization-quantization/hqq/SKILL.md) | Half-Quadratic Quantization without calibration data |
+
+### [post-training-rlhf](./post-training-rlhf)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [grpo-rl-training](./post-training-rlhf/grpo-rl-training/SKILL.md) | GRPO/RL fine-tuning with TRL for reasoning tasks |
+| [miles](./post-training-rlhf/miles/SKILL.md) | Enterprise-grade RL training |
+| [openrlhf](./post-training-rlhf/openrlhf/SKILL.md) | High-performance RLHF with Ray+vLLM acceleration |
+| [simpo](./post-training-rlhf/simpo/SKILL.md) | Simple Preference Optimization — reference-free DPO alternative |
+| [slime](./post-training-rlhf/slime/SKILL.md) | LLM post-training with Megatron+SGLang |
+| [torchforge](./post-training-rlhf/torchforge/SKILL.md) | PyTorch-native agentic RL (Meta) |
+| [trl-fine-tuning](./post-training-rlhf/trl-fine-tuning/SKILL.md) | SFT, DPO, PPO, GRPO for LLM alignment with TRL |
+| [verl](./post-training-rlhf/verl/SKILL.md) | Volcano Engine RL training for LLMs |
+
+### [prompt-engineering](./prompt-engineering)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [dspy](./prompt-engineering/dspy/SKILL.md) | Declarative AI programming with automatic prompt optimization |
+| [guidance](./prompt-engineering/guidance/SKILL.md) | Control LLM output with regex/grammars, guarantee valid JSON/XML |
+| [instructor](./prompt-engineering/instructor/SKILL.md) | Structured data extraction from LLMs with Pydantic validation |
+| [outlines](./prompt-engineering/outlines/SKILL.md) | Guarantee valid JSON/XML/code structure during generation |
+
+### [rag-retrieval](./rag-retrieval)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [chroma](./rag-retrieval/chroma/SKILL.md) | Open-source embedding database for AI applications |
+| [faiss](./rag-retrieval/faiss/SKILL.md) | Facebook's efficient similarity search for dense vectors |
+| [pinecone](./rag-retrieval/pinecone/SKILL.md) | Managed vector database for production AI |
+| [qdrant](./rag-retrieval/qdrant/SKILL.md) | High-performance vector search for RAG and semantic search |
+| [sentence-transformers](./rag-retrieval/sentence-transformers/SKILL.md) | State-of-the-art sentence and text embeddings |
+
+### [safety-alignment](./safety-alignment)
+*Source: [Orchestra Research](https://github.com/Orchestra-Research/AI-Research-SKILLs)*
+| Skill | Description |
+|-------|-------------|
+| [constitutional-ai](./safety-alignment/constitutional-ai/SKILL.md) | Anthropic's method for training harmless AI through self-improvement |
+| [llamaguard](./safety-alignment/llamaguard/SKILL.md) | Meta's moderation model for LLM input/output filtering |
+| [nemo-guardrails](./safety-alignment/nemo-guardrails/SKILL.md) | NVIDIA runtime safety framework for LLM applications |
+| [prompt-guard](./safety-alignment/prompt-guard/SKILL.md) | Meta's prompt injection and jailbreak detector |
+
 ## Updating
 
 Run `update_skills.sh` to check for new skills from K-Dense and download any that aren't already included.
@@ -159,7 +332,8 @@ Excluded skills are listed in [`excluded.conf`](./excluded.conf), grouped by cat
 
 ## Sources
 
-- [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) — primary source for most skills
+- [K-Dense AI Scientific Skills](https://github.com/K-Dense-AI/claude-scientific-skills) — scientific research, data analysis, databases, communication, and methodology skills
+- [Orchestra Research AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) (MIT license) — AI/ML engineering skills: fine-tuning, inference, optimization, RAG, agents, distributed training, interpretability, safety, MLOps, multimodal, and more
 - custom — autonomous PyTorch model tuning on Ray clusters, derived from autoresearch (`custom/autoraysearch`)
 - [notebooklm-py](https://github.com/teng-lin/notebooklm-py) — complete programmatic API for Google NotebookLM (`scientific-communication/notebooklm`)
 - custom — YouTube video transcription with faster-whisper and interactive Claude workflow (`custom/youtube_sum`)
